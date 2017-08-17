@@ -2,22 +2,31 @@
 import {NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule } from "@angular/http";
+import { FormsModule } from "@angular/forms";
 import "rxjs/Rx";
 
 import { AppComponent } from "./app.component";
+import { ItemListComponent } from "./itemlist.component";
+import { ItemDetailComponent } from "./item-detail.component";
+import { ItemService } from "./item.service";
+
 
 @NgModule({
     // directives, component and pipes
     declarations: [
-        AppComponent
+        AppComponent,
+        ItemListComponent,
+        ItemDetailComponent
     ],
     //modules
     imports: [
         BrowserModule,
-        HttpModule
+        HttpModule,
+        FormsModule
     ],
     //providers
     providers: [
+        ItemService
     ],
     bootstrap: [AppComponent]
 })

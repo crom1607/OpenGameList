@@ -19,6 +19,7 @@ var ngPackageNames = [
 'platform-browser',
 'platform-browser-dynamic',
 'upgrade',
+'forms'
 ];
 function packIndex(pkgName) {
     packages['@angular/' + pkgName] = { main: 'index.js',
